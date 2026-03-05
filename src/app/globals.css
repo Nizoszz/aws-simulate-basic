@@ -5,6 +5,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --sushi: rgba(124, 190, 55, 1);
+  --marshland: rgba(14, 19, 10, 1);
+  --conifer2: rgba(169, 226, 76, 0.5);
+  --crete: rgba(73, 113, 42, 1);
+  --olive-drab1: rgba(89, 150, 45, 1);
+  --conifer1: rgba(155, 220, 69, 1);
+  --olive-drab2: rgba(83, 164, 41, 1);
+  --parsley: rgba(50, 97, 31, 1);
+  --woodland: rgba(68, 84, 44, 1);
+  --lima: rgba(111, 180, 28, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,8 +24,31 @@
   }
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(
+    to bottom,
+    var(--marshland) 0%,
+    var(--olive-drab1) 50%,
+    /* var(--olive-drab2) 50%,
+    var(--lima) 65%,
+    var(--parsley) 85%, */
+      var(--marshland) 100%
+  );
   font-family: Arial, Helvetica, sans-serif;
+}
+main,
+header {
+  @apply flex flex-col gap-5 px-[8%] py-5;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
